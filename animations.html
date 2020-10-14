@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: relative;
+
+
+            animation-name: movingBox;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+        }
+
+        /* 
+            animation-name: declares the name of the @keyframes at-rule to manipulate.
+            animation-duration: the length of time it takes for an animation to complete one cycle.
+            animation-timing-function: establishes preset acceleration curves such as ease or linear.
+            animation-delay: the time between the element being loaded and the start of the animation sequence (cool examples).
+            animation-direction: sets the direction of the animation after the cycle. Its default resets on each cycle.
+            animation-iteration-count: the number of times the animation should be performed.
+            animation-fill-mode: sets which values are applied before/after the animation.
+            For example, you can set the last state of the animation to remain on screen, or you can set it to switch back to before when the animation began.
+            animation-play-state: pause/play the animation.
+        */
+
+        @keyframes movingBox {
+            0% {
+                background-color: blue;
+            }
+
+            25% {
+                background-color: green;
+                transform: translate(300px, 0);
+            }
+
+            50% {
+                background-color: yellow;
+                transform: translate(300px, 300px);
+            }
+
+            75% {
+                background-color: orange;
+                transform: translate(0, 300px);
+            }
+
+            100% {
+                background-color: red;
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+    <title>Animations</title>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

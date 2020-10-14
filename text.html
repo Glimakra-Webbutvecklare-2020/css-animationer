@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Text</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            margin: auto;
+            text-align: center;
+            padding: 3rem;
+            line-height: 1.7;
+        }
+
+        h1 {
+            font-size: xxx-large;
+            font-weight: 900;
+        }
+
+        h1>div {
+            font-size: large;
+            font-weight: 500;
+        }
+
+        section {
+            padding: 2rem;
+            width: 50%;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            animation-direction: normal;
+            animation-duration: 1.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+
+        .pitch-image {
+            margin: 0.5rem;
+        }
+
+        .pitch-text {
+            display: block;
+            margin: 0 auto;
+        }
+
+        section:nth-of-type(even) {
+            border: 2px solid black;
+            border-right: none;
+            margin-left: auto;
+            animation-name: slidingInFromRight;
+        }
+
+        section:nth-of-type(odd) {
+            border: 2px solid black;
+            border-left: none;
+            flex-direction: row-reverse;
+            animation-name: slidingInFromLeft;
+        }
+
+        /* Animation */
+        @keyframes slidingInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slidingInFromRight {
+            0% {
+                transform: translateX(100%);
+            }
+
+            50% {
+                transform: translateX(50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>A Great deal <div>Why would you not take it?</div>
+        </h1>
+    </header>
+
+    <section>
+        <img class="pitch-image" src="https://via.placeholder.com/500" alt="placeholder">
+        <p class="pitch-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis fugiat,
+            et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis
+            fugiat, et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis
+            fugiat, et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi.
+        </p>
+    </section>
+
+    <section>
+        <img class="pitch-image" src="https://via.placeholder.com/500" alt="placeholder">
+        <p class="pitch-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis fugiat,
+            et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis
+            fugiat, et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis
+            fugiat, et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi.
+        </p>
+    </section>
+
+    <section>
+        <img class="pitch-image" src="https://via.placeholder.com/500" alt="placeholder">
+        <p class="pitch-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis fugiat,
+            et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis
+            fugiat, et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni, voluptatum quae nulla debitis
+            fugiat, et
+            ex facere, vel culpa obcaecati reprehenderit soluta accusantium quibusdam non officiis consequatur. Eius,
+            commodi.
+        </p>
+    </section>
+</body>
+
+</html>
